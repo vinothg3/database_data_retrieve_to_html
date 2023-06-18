@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1
+        {
+            background-color: red;
+        }
+        .a1
+        {
+            background-color: aqua;
+            color: black;
+            padding: 1px;
+        }
+        tr
+        {
+            color: aqua;
+            background-color: black;
+        }
+        td
+        {
+            padding: 10px;
+            color: blueviolet;
+        }
+        th
+        {
+            padding: 10px;
+        }
+        a{
+            background-color: black;
+            border: 2px cyan solid;
+            padding: 5px;
+            margin: 10px;
+            color: darkorange;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: yellow;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Topic is a table name</h1>
+        <table border="2px" class="a1">
+            <tr id="a2">
+                <th>Topic_name</th>
+            </tr>
+            {% for x in topic %}
+            <tr>
+                <td>{{x.Table_name}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{% url 'display_webpage' %}">go webpage table</a>
+        <a href="{% url 'display_access' %}">go access table</a>
+    </center>
+</body>
+</html>

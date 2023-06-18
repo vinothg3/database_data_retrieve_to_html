@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+            background-color: black;
+
+        }
+        tr
+        {
+            background-color: rgb(234, 0, 255);
+            padding: 10px;
+        }
+        th{
+            color: antiquewhite;
+            padding: 10px;
+        }
+        td
+        {
+            color: crimson;
+            padding: 10px;
+        }
+        a{
+            background-color: black;
+            border: 2px cyan solid;
+            padding: 5px;
+            margin: 10px;
+            color: darkorange;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: yellow;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>this is a webpage </h1>
+        <table border="1px">
+            <tr>
+                <th>Table_name</th>
+                <th>name</th>
+                <th>email</th>
+                <th>url</th>
+            </tr>
+            {% for ow in web %}
+            <tr>
+                <td>{{ow.Table_name}}</td>
+                <td>{{ow.name}}</td>
+                <td>{{ow.url}}</td>
+                <td>{{ow.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{% url 'display_topic' %}">go topic table</a>
+        <a href="{% url 'display_access' %}">go access table</a>
+    </center>
+</body>
+</html>

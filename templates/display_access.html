@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: rgb(2, 22, 22);
+        }
+        h1
+        {
+            color: aqua;
+        }
+        table
+        {
+            background-color: black;
+
+        }
+        tr
+        {
+            background-color: rgb(234, 0, 255);
+            padding: 10px;
+        }
+        th{
+            color: antiquewhite;
+            padding: 10px;
+        }
+        td
+        {
+            color: crimson;
+            padding: 10px;
+        }
+        a{
+            background-color: black;
+            border: 2px cyan solid;
+            padding: 5px;
+            margin: 10px;
+            color: darkorange;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: yellow;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>This is access table</h1>
+
+        <table border="1px">
+            <tr>
+                <th>name</th>
+                <th>author</th>
+                <th>date</th>
+            </tr>
+            {% for ao in access %}
+            <tr>
+                <td>{{ ao.name }}</td>
+                <td>{{ ao.author }}</td>
+                <td>{{ ao.date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{% url 'display_topic' %}">go topic table</a>
+        <a href="{% url 'display_webpage' %}">go webpage table</a>
+    </center>
+    
+</body>
+</html>
